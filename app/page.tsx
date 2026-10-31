@@ -13,6 +13,16 @@ import { Footer } from "@/layout/footer";
 export default function Home() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#0a0c0d] text-[#f9faf9] selection:bg-[#bafc0c] selection:text-[#0a0c0d]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Création de sites web, CRM et applications pour agences de voyage",
+        serviceType: "Développement web et logiciel sur mesure",
+        description: "Sites web, CRM et applications pour présenter les circuits et gérer les dossiers voyageurs des agences de voyage au Maroc.",
+        provider: { "@type": "Organization", name: "Stallion Advertising" },
+        areaServed: { "@type": "Country", name: "Maroc" },
+        audience: { "@type": "BusinessAudience", audienceType: "Agences de voyage" },
+      }).replace(/</g, "\\u003c") }} />
       <Background />
       <Header />
       <main>

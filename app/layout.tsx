@@ -2,12 +2,42 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 
+const title = "Site web et CRM pour agence de voyage au Maroc | Stallion";
+const description =
+  "Création de sites web, CRM et applications pour agences de voyage au Maroc. Présentez vos circuits, suivez vos devis et centralisez vos dossiers voyageurs.";
+
 export const metadata: Metadata = {
-  title: "Sites web, CRM et applications pour agences de voyage | Stallion Advertising",
-  description: "Stallion Advertising développe des sites web, CRM et applications sur mesure pour les agences de voyage au Maroc : circuits, demandes de devis et dossiers voyageurs.",
-  openGraph: { title: "Solutions digitales pour agences de voyage", description: "Sites web, CRM et applications sur mesure au Maroc par Stallion Advertising.", locale: "fr_MA", type: "website" },
-  twitter: { card: "summary", title: "Stallion Advertising | Agences de voyage", description: "Sites web, CRM et applications pour votre agence de voyage au Maroc." },
-  icons: { icon: "/unicorn.png" },
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL
+    ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+    : undefined,
+  alternates: process.env.NEXT_PUBLIC_SITE_URL
+    ? { canonical: new URL("/", process.env.NEXT_PUBLIC_SITE_URL).href }
+    : undefined,
+  title,
+  description,
+  applicationName: "Stallion Advertising",
+  category: "Développement web pour agences de voyage",
+  openGraph: {
+    title,
+    description,
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    siteName: "Stallion Advertising",
+    locale: "fr_MA",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image", title, description },
+  icons: { icon: "/unicorn.png", apple: "/unicorn.png" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
