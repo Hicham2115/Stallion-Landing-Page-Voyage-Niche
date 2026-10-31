@@ -27,7 +27,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="relative z-1 flex flex-nowrap items-center gap-6 overflow-x-auto whitespace-nowrap border-y border-white/10 bg-white/[.025] px-5 py-6 text-xs font-bold text-[#bafc0c] sm:justify-center sm:gap-10 sm:text-base [&>span]:shrink-0"><span>Sites web de voyage</span><span>CRM & dossiers clients</span><span>Applications sur mesure</span></div>
+        <div className="relative z-1 flex flex-col items-center gap-4 sm:flex-row sm:flex-nowrap border-y border-white/10 bg-white/[.025] px-5 py-6 text-xs font-bold text-[#bafc0c] sm:justify-center sm:gap-10 sm:text-base [&>span]:shrink-0"><span>Sites web de voyage</span><span>CRM & dossiers clients</span><span>Applications sur mesure</span></div>
         <DevelopmentService />
         <Process />
         <CaseStudies />

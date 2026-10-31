@@ -42,8 +42,9 @@ export function Faq() {
             Les réponses <em className="text-[#bafc0c]">sans détour.</em>
           </h2>
           <p className="mt-6 max-w-md text-[16px] leading-relaxed text-[#b6b9bb]">
-            Un bon partenaire de développement doit clarifier la marche à suivre.
-            Voici les réponses aux questions que l’on nous pose le plus souvent.
+            Un bon partenaire de développement doit clarifier la marche à
+            suivre. Voici les réponses aux questions que l’on nous pose le plus
+            souvent.
           </p>
           <a
             href="#project-form"
@@ -72,7 +73,7 @@ export function Faq() {
                   aria-hidden="true"
                 />
               </summary>
-              <p className="max-w-2xl px-5 pb-5 pl-14 text-[15px] leading-relaxed text-[#b6b9bb] sm:px-6 sm:pl-16">
+              <p className="max-w-2xl px-5 pb-5 pl-14 text-[15px] leading-relaxed text-[#e4e8eb] sm:px-6 sm:pl-16">
                 {answer}
               </p>
             </details>
